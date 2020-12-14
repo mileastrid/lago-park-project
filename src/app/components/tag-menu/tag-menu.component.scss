@@ -1,0 +1,193 @@
+:host {
+  width: max-content;
+  height: 220px;
+  background: linear-gradient(0deg, rgba(14, 14, 14, 0.6), rgba(14, 14, 14, 0.6)), url();
+  box-shadow: 0px 4px 10px rgba(30, 30, 30, 0.12);
+  border-radius: 10px;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 20px 20px;
+}
+
+.containerFullTag {
+  display: flex;
+  width: 100%;
+  height: 100%;
+  position: relative;
+}
+
+.imageComponent {
+  position: absolute;
+  top: 0;
+  height: 100%;
+  z-index: 1;
+}
+
+.contentTag {
+  z-index: 2;
+  width: 170px;
+  height: 100%;
+  background-color: rgba(28, 28, 28, 0.672);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 18px;
+  line-height: 23px;
+  text-align: center;
+
+  color: #FFF9F9;
+}
+
+.buttonsTag {
+  width: 100%;
+  align-items: center;
+  justify-content: space-evenly;
+  display: flex;
+}
+
+.buttonMore {
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 13px;
+  line-height: 15px;
+  text-align: center;
+  cursor: pointer;
+  color: #1F1E1E;
+  border: none;
+  outline: none;
+  padding: 10px 20px;
+  background: #FFF9F9;
+  border-radius: 30px;
+}
+
+.buttonAddShop {
+  background: #FFFFFF;
+  border: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 10px 10px;
+  box-shadow: 0px 4px 10px rgba(30, 30, 30, 0.12);
+  border-radius: 30px;
+}
+
+.containerFullTagOpen {
+  width: 400px;
+  height: 220px;
+  display: flex;
+  position: relative;
+}
+
+.imageComponentOpen {
+  height: 100%;
+  width: 250px;
+  position: relative;
+
+  img {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+
+}
+
+.contentTagOpen {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+  background-color: #FFFFFF;
+
+
+}
+
+.contentTitleOpen {
+  width: 100%;
+  display: flex;
+  height: max-content;
+  align-items: center;
+  justify-content: space-evenly;
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 20px;
+  line-height: 23px;
+
+  color: #3D3D3D;
+}
+
+.contentIngredientsOpen {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+}
+
+.contentIngredientsContainerOpen {
+  display: flex;
+  flex-direction: column;
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 18px;
+  line-height: 21px;
+  /* identical to box height */
+
+  text-align: center;
+
+  color: #959595;
+}
+
+.buttonAddShopOpen {
+  background-color: #E2884D;
+  border: none;
+  display: flex;
+  align-self: flex-end;
+  align-items: center;
+  justify-content: center;
+  padding: 12px 12px;
+  box-shadow: 0px 4px 10px rgba(30, 30, 30, 0.12);
+  border-radius: 30px;
+
+  svg {
+    path {
+      fill: #FFFFFF
+    }
+  }
+}
+
+.buttonReturn {
+  position: absolute;
+  z-index: 3;
+  top: 20px;
+  left: 20px;
+  background: #E2884D;
+  border: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 10px 10px;
+  box-shadow: 0px 4px 10px rgba(30, 30, 30, 0.59);
+  border-radius: 30px;
+  cursor: pointer;
+  outline: none;
+
+  svg {
+    margin-right: 1px;
+
+    path {
+      fill: #FFFFFF
+    }
+  }
+}
