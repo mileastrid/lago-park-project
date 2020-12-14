@@ -1,0 +1,32 @@
+:host {
+  width: 100%;
+  height: max-content;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.containerMenu {
+  margin-top: 140px;
+  display: flex;
+  flex-direction: column;
+  max-width: 1140px;
+  width: 100%;
+  height: max-content;
+}
+
+.titleMenu {
+  font-family: Inter;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 28px;
+  line-height: 34px;
+  margin-left: 20px;
+  color: #1F1E1E;
+}
+
+.containerTagMenu {
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+}
