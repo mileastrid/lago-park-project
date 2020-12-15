@@ -3,13 +3,7 @@
     <div class="containerLogo" routerLink="">
       <img src="assets/img/logoMenu.png" alt="" />
     </div>
-    <input
-      class="inputLogin"
-      type="text"
-      name=""
-      id=""
-      placeholder="Ingrese Su Nombre"
-    />
+
 
     <input
       class="inputLogin"
@@ -17,6 +11,7 @@
       name=""
       id=""
       placeholder="Ingrese Su Email"
+      #inputEmail
     />
     <input
       class="inputLogin"
@@ -24,6 +19,7 @@
       name=""
       id=""
       placeholder="Ingrese Su Contraseña"
+      #inputPassword
     />
     <input
       class="inputLogin"
@@ -32,6 +28,6 @@
       id=""
       placeholder="Confirmar Contraseña"
     />
-    <button class="buttonLogin" type="submit">Registrarse</button>
+    <button (click)="onSubmit()" class="buttonLogin" type="submit">Registrarse</button>
   </div>
 </div>

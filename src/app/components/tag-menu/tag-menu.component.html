@@ -1,16 +1,11 @@
 <div class="containerFullTag" *ngIf="!openTag">
-  <img
-    src="https://img.freepik.com/foto-gratis/concepto-cocina-india-alitas-pollo-al-horno-patas-salsa-mostaza-miel-sirviendo-platos-restaurante-plato-negro-especias-indias-mesa-madera-imagen-fondo_127425-18.jpg?size=626&ext=jpg"
-    alt=""
-    srcset=""
-    class="imageComponent"
-  />
+  <img src="{{ image }}" alt="" srcset="" class="imageComponent" />
   <div class="contentTag">
     <span>{{ name }}</span>
     <span>$ {{ mount }}</span>
     <div class="buttonsTag">
       <button class="buttonMore" (click)="openTag = !openTag">Ver mas</button>
-      <button class="buttonAddShop">
+      <button (click)="addShop()" class="buttonAddShop">
         <svg
           width="11"
           height="11"
@@ -26,15 +21,12 @@
       </button>
     </div>
   </div>
+
 </div>
 
 <div class="containerFullTagOpen" *ngIf="openTag">
   <div class="imageComponentOpen">
-    <img
-      src="https://img.freepik.com/foto-gratis/concepto-cocina-india-alitas-pollo-al-horno-patas-salsa-mostaza-miel-sirviendo-platos-restaurante-plato-negro-especias-indias-mesa-madera-imagen-fondo_127425-18.jpg?size=626&ext=jpg"
-      alt=""
-      srcset=""
-    />
+    <img src="{{ image }}" alt="" srcset="" />
   </div>
 
   <div class="contentTagOpen">

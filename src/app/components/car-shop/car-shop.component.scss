@@ -1,0 +1,58 @@
+.carShopContainer {
+  display: flex;
+  flex-direction: column;
+  position: fixed;
+  right: 0;
+  top: 100px;
+  width: 300px;
+  height: calc(100vh - 100px);
+  background-color: #373737;
+  z-index: 5;
+}
+
+.carShopContainerItems {
+  width: 100%;
+  height: 80%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+.carShopItem {
+  margin: 10px 0px;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  width: 80%;
+  height: 60px;
+  border-radius: 4px;
+  background-color: white;
+
+  img {
+    height: 45px;
+    width: 45px;
+    object-fit: cover;
+    border-radius: 200px;
+  }
+
+  span {
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 15px;
+    line-height: 18px;
+    text-align: center;
+
+    color: #1F1E1E
+  }
+}
+
+.carShopCount{
+   width: 100%;
+   height: 20%;
+   display: flex;
+   align-items: center;
+   justify-content: space-around;
+   background-color: red;
+}

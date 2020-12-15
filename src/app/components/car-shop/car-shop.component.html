@@ -1,0 +1,18 @@
+<div *ngIf='shop.length > 0'  class="carShopContainer">
+  <div class="carShopContainerItems">
+    <div class="carShopItem" *ngFor="let item of shop">
+      <img src="{{ item.image }}" alt="" srcset="" />
+      <span>
+        {{ item.name }}
+      </span>
+      <span>
+        {{ item.count }}
+      </span>
+    </div>
+  </div>
+  <div *ngIf="mountArray" class="carShopCount">
+   <span >
+       {{ mountArray }}
+   </span>
+  </div>
+</div>

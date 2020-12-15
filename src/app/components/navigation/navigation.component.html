@@ -5,7 +5,11 @@
   <a routerLink="menu">Menú</a>
   <a routerLink="recreacion">Recreación</a>
 </div>
-<div class="loginButtons">
-  <button class="buttonLogin" routerLink="login">Login</button>
-  <button class="buttonSignup" routerLink="signup">Sign Up</button>
+<div *ngIf="!auth" class="loginButtons">
+  <button  class="buttonLogin" routerLink="login">Login</button>
+  <button   class="buttonSignup" routerLink="signup">Sign Up</button>
+</div>
+
+<div *ngIf="auth" class="loginButtons">
+  <button  class="buttonLogin" (click)='logOut()'>Log Out</button>
 </div>
