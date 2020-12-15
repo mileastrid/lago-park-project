@@ -8,8 +8,8 @@ import{ GlobalConstants } from '../../common/global-constants';
 })
 
 export class TagMenuComponent implements OnInit {
-  shop:any = GlobalConstants.shopArray;
-  mountArray = GlobalConstants.mountArray;
+  shop:any = GlobalConstants.shopArray.items;
+  mountArray = GlobalConstants.shopArray.mount;
   
   @Input() name: String='';
   @Input() mount: String="0";
@@ -23,27 +23,33 @@ export class TagMenuComponent implements OnInit {
 
   ngOnInit(): void {}
   addShop():void{
-    var isArray = false;
-    const newObject = {image:this.image,name:this.name,mount:this.mount,count:1}
-    if(this.shop.length < 1){
-   this.shop.push(newObject)
-    }
+    if(!GlobalConstants.shopArray.checkState){
+
+      
+      var isArray = false;
+      const newObject = {image:this.image,name:this.name,mount:this.mount,count:1}
+      if(this.shop.length < 1){
+        this.shop.push(newObject)
+      }
     else{
-    for (const e of this.shop) {
-       if(e.name == this.name ){
+      for (const e of this.shop) {
+        if(e.name == this.name ){
       e.count = e.count + 1;
       isArray= true
-      }
-  
     }
+  
+  }
      if(isArray==false){
        this.shop.push(newObject)
       }
     }
-  GlobalConstants.shopArray = this.shop
-  for(const e of this.shop){
-    GlobalConstants.mountArray = `${parseInt(GlobalConstants.mountArray) + (parseInt(e.mount) * e.count)},000`
+    for(const e of this.shop){
+      this.mountArray = GlobalConstants.shopArray.mount + (parseInt(e.mount) * e.count)
+    }
+    
+    GlobalConstants.shopArray.mount = this.mountArray
+    GlobalConstants.shopArray.items = this.shop
+    
   }
-
-  }
+}
 }

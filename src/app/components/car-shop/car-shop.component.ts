@@ -8,10 +8,17 @@ import { GlobalConstants } from '../../common/global-constants';
 })
 export class CarShopComponent implements OnInit {
   shop: any = GlobalConstants.shopArray;
-  mountArray = GlobalConstants.mountArray;
+  client = 0;
+  checkNumber=0;
   constructor() {}
 
   ngOnInit(): void {
-    
+ 
+  }
+
+  check(): void {
+    GlobalConstants.shopArray.checkState = true;
+    this.checkNumber = Math.floor((Math.random() * 9000000) + 1000000);
+    this.client = Math.floor((Math.random() * 100) + 1);
   }
 }

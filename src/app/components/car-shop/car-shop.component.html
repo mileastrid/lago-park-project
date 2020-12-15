@@ -1,18 +1,44 @@
-<div *ngIf='shop.length > 0'  class="carShopContainer">
-  <div class="carShopContainerItems">
-    <div class="carShopItem" *ngFor="let item of shop">
-      <img src="{{ item.image }}" alt="" srcset="" />
-      <span>
-        {{ item.name }}
-      </span>
-      <span>
-        {{ item.count }}
-      </span>
+<div *ngIf="shop.items.length > 0" class="carShopContainer">
+  <div *ngIf="shop.checkState == false" class="carShopContainerItems">
+    <div class="carShopItemContainer">
+      <div class="carShopItemContainerFull">
+        <div class="carShopItem" *ngFor="let item of shop.items">
+          <img src="{{ item.image }}" alt="" srcset="" />
+          <span>
+            {{ item.name }}
+          </span>
+          <span>
+            {{ item.count }}
+          </span>
+        </div>
+      </div>
     </div>
   </div>
-  <div *ngIf="mountArray" class="carShopCount">
-   <span >
-       {{ mountArray }}
-   </span>
+
+  <div *ngIf="shop.checkState == true" class="carShopContainerItemsCheck">
+    <span class="restaurantSpan"> Lago Park </span>
+    <span class="clientSpan"> Numero de cliente #{{ client }} </span>
+    <div class="carShopItemCheckTitle">
+      <span>Platillo</span>
+      <span>Cantidad</span>
+    </div>
+    <div class="carShopItemContainerCheck">
+      <div class="carShopItemCheck" *ngFor="let item of shop.items">
+        <span> {{ item.name }}</span>
+        <span> {{ item.count }}</span>
+      </div>
+    </div>
+  </div>
+  <div *ngIf="shop.checkState == true" class="carShopContainerItemsCode">
+    Codigo para Pagar <br />
+    {{ checkNumber }}
+  </div>
+  <div *ngIf="shop.checkState == false" class="carShopCount">
+    <span> A Pagar: {{ shop.mount }},000 </span>
+    <button (click)="check()">Pagar</button>
+  </div>
+
+  <div *ngIf="shop.checkState == true" class="carShopCount">
+    <span> Por Favor Pase A Pagar</span>
   </div>
 </div>
