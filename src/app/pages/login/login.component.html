@@ -3,8 +3,8 @@
     <div class="containerLogo" routerLink="">
       <img src="assets/img/logoMenu.png" alt="" />
     </div>
-    <input class="inputLogin" type="email" name="" id="" placeholder="Ingrese Su Email"/>
-    <input class="inputLogin" type="password" name="" id="" placeholder="Ingrese Su Password"/>
-    <button class="buttonLogin" type="submit">Login</button>
+    <input class="inputLogin" type="email" name="" #inputEmail  placeholder="Ingrese Su Email"/>
+    <input class="inputLogin" type="password" name="" #inputPassword  placeholder="Ingrese Su Password"/>
+    <button (click)="onSubmit()" class="buttonLogin" type="submit">Login</button>
   </div>
 </div>
