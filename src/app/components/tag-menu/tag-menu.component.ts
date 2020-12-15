@@ -42,8 +42,7 @@ export class TagMenuComponent implements OnInit {
     }
   GlobalConstants.shopArray = this.shop
   for(const e of this.shop){
-    GlobalConstants.mountArray = `${parseInt(GlobalConstants.mountArray) + (parseInt(e.mount) * e.count)}.000`
-    console.log(GlobalConstants.mountArray)
+    GlobalConstants.mountArray = `${parseInt(GlobalConstants.mountArray) + (parseInt(e.mount) * e.count)},000`
   }
 
   }
