@@ -32,7 +32,7 @@ var header = {
 
 localStorage.removeItem('auth');
 
-this.router.navigateByUrl('/login');
+window.location.reload()
   }
 
 }

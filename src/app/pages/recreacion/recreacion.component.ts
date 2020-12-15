@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { HttpClient, HttpHeaders } from '@angular/common/http';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-recreacion',
@@ -6,10 +8,30 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./recreacion.component.scss']
 })
 export class RecreacionComponent implements OnInit {
-
-  constructor() { }
+  auth = false;
+  constructor(private http: HttpClient, private router: Router) {}
 
   ngOnInit(): void {
-  }
+    const item = localStorage.getItem('auth');
 
+    var header = {
+      headers: new HttpHeaders().set('Authorization', `bearer ${item}`),
+    };
+
+    this.http
+      .post(
+        'https://lago-park-api-project.herokuapp.com/auth',
+        {},
+        {
+          headers: { Authorization: `bearer ${item}` },
+        }
+      )
+      .subscribe((res: any) => {
+        this.auth = true;
+      },(error: any) => {
+        this.router.navigateByUrl('/login');
+      });
+
+ 
+  }
 }
