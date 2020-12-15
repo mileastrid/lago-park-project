@@ -23,7 +23,9 @@ export class LoginComponent implements OnInit {
     password: this.inputPassword.nativeElement.value
 }).subscribe((res:any) => {
             localStorage.setItem('auth', res.token);
-            this.router.navigateByUrl('/menu');
+            window.location.href = '/menu'
+          },(error: any)=>{
+            window.location.reload()
           });;
     }
     else{
