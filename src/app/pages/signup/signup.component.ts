@@ -26,7 +26,7 @@ export class SignupComponent implements OnInit {
         .subscribe(
           (res: any) => {
             localStorage.setItem('auth', res.token);
-            this.router.navigateByUrl('/menu');
+            this.router.navigateByUrl('/menvu');
           },
           (error: any) => {
             window.location.reload();
