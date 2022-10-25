@@ -8,8 +8,9 @@ describe('TagMenuComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ TagMenuComponent ]
-    })
+    declarations: [TagMenuComponent],
+    teardown: { destroyAfterEach: false }
+})
     .compileComponents();
   });
 
