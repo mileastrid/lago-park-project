@@ -127,5 +127,8 @@
       }
     }
   },
-  "defaultProject": "lago-park-project"
+  "defaultProject": "lago-park-project",
+  "cli": {
+    "analytics": "31302ae7-25da-4569-b8be-fabd4db8d247"
+  }
 }
